@@ -28,7 +28,10 @@ var toDo = mongoose.model('toDo', {
 app.get('/api/todos', function (req, res) {
   // use mongoose to get all todos in the database
   toDo.find(function (err, todos) {
-    // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+    /*
+    if there is an error retrieving, send the error.
+    nothing after res.send(err) will execute
+    */
     if (err) {
       res.send(err)
     }
